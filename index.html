@@ -55,6 +55,14 @@ h1 span{display:block;background:linear-gradient(180deg,var(--ye),var(--or));-we
 .cta2{margin-top:30px}
 footer{margin-top:28px;font-size:11.5px;color:#7c7c86;line-height:1.5}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1075209005573717');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1075209005573717&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <div class="stripe"></div>
@@ -97,7 +105,17 @@ footer{margin-top:28px;font-size:11.5px;color:#7c7c86;line-height:1.5}
 <div class="stripe"></div>
 <script>
 var destino=document.getElementById('entrar').href;
-setTimeout(function(){window.location.href=destino;},4000);
+var indo=false;
+function ir(via){
+  if(indo)return; indo=true;
+  try{fbq('track','Lead',{content_name:via});}catch(e){}
+  setTimeout(function(){window.location.href=destino;},350);
+}
+var ctas=document.querySelectorAll('a.cta');
+for(var i=0;i<ctas.length;i++){
+  ctas[i].addEventListener('click',function(ev){ev.preventDefault();ir('botao');});
+}
+setTimeout(function(){ir('auto');},4000);
 </script>
 </body>
 </html>
