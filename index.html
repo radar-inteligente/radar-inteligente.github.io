@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clube Relâmpago das Ferramentas – Radar Inteligente</title>
+<meta name="description" content="Grupo gratuito no WhatsApp com ofertas e cupons de ferramentas elétricas, manuais e baterias.">
+<meta property="og:title" content="Clube Relâmpago das Ferramentas">
+<meta property="og:description" content="Grupo gratuito no WhatsApp com ofertas e cupons de ferramentas selecionadas.">
+<meta property="og:type" content="website">
+<style>
+  :root { --bg:#0f1115; --card:#181b22; --accent:#ff9f1c; --green:#25d366; --text:#f4f4f5; --muted:#a1a1aa; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:var(--text);
+         min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; }
+  main { width:100%; max-width:440px; background:var(--card); border-radius:18px; padding:28px 22px; text-align:center;
+         border:1px solid #262a33; }
+  .brand { font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+  h1 { font-size:26px; line-height:1.2; margin:10px 0 8px; }
+  p.sub { color:var(--muted); font-size:15px; line-height:1.45; margin-bottom:18px; }
+  ul { list-style:none; text-align:left; margin:0 0 22px; display:grid; gap:10px; }
+  li { background:#1f232c; border-radius:12px; padding:12px 14px; font-size:15px; line-height:1.35; }
+  .btn { display:block; background:var(--green); color:#06240f; text-decoration:none; font-weight:800; font-size:18px;
+         padding:16px 18px; border-radius:14px; }
+  .btn:active { transform:scale(.98); }
+  .note { color:var(--muted); font-size:13px; margin-top:12px; }
+  footer { color:#71717a; font-size:11.5px; line-height:1.4; margin-top:20px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">Radar Inteligente</div>
+  <h1>Clube Relâmpago das Ferramentas</h1>
+  <p class="sub">Grupo gratuito no WhatsApp com ofertas e cupons selecionados para quem quer comprar ferramentas pagando menos.</p>
+  <ul>
+    <li>⚡ Ofertas relâmpago e descontos exclusivos</li>
+    <li>🔧 Ferramentas elétricas, manuais e a bateria</li>
+    <li>🔔 Alertas das melhores oportunidades</li>
+  </ul>
+  <a id="entrar" class="btn" href="https://chat.whatsapp.com/DybwBRGoUXmJlL7b3PTkMV">Entrar no grupo do WhatsApp</a>
+  <p class="note" id="aviso">Abrindo o WhatsApp automaticamente…</p>
+  <footer>
+    Grupo gratuito. Os preços e a disponibilidade dos produtos podem mudar a qualquer momento nas lojas parceiras.
+    Alguns links podem gerar comissão para o Radar Inteligente, sem custo adicional para você.
+  </footer>
+</main>
+<script>
+  // Redireciona sozinho para o convite do grupo; o botão continua disponível caso o redirecionamento falhe.
+  var destino = document.getElementById('entrar').href;
+  setTimeout(function () { window.location.href = destino; }, 1800);
+</script>
+<noscript><style>#aviso{display:none}</style></noscript>
+</body>
+</html>
