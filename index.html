@@ -32,7 +32,7 @@ background:conic-gradient(from 0deg,rgba(255,214,10,.55),rgba(255,214,10,0) 28%,
 .b1{top:26%;left:68%}.b2{top:66%;left:24%;animation-delay:1s}.b3{top:72%;left:70%;animation-delay:2s}
 @keyframes blip{0%,100%{opacity:0;transform:scale(.4)}20%{opacity:1;transform:scale(1.2)}60%{opacity:0}}
 .tag{display:inline-block;margin-top:14px;background:var(--ye);color:#111;font-weight:900;font-size:12px;letter-spacing:.12em;padding:6px 12px;border-radius:4px;text-transform:uppercase;transform:skew(-8deg)}
-h1{margin-top:14px;font-family:Impact,"Arial Black",system-ui,sans-serif;font-weight:900;text-transform:uppercase;line-height:.95;font-size:clamp(44px,14vw,64px);letter-spacing:.01em}
+h1{margin-top:14px;font-family:Impact,"Arial Black",system-ui,sans-serif;font-weight:900;text-transform:uppercase;line-height:.95;font-size:clamp(34px,10.5vw,56px);letter-spacing:0;overflow-wrap:anywhere}
 h1 span{display:block;background:linear-gradient(180deg,var(--ye),var(--or));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 18px rgba(255,122,0,.5))}
 .sub{margin:14px auto 0;max-width:340px;color:#d6d6dc;font-size:16px;line-height:1.45}
 .sub b{color:#fff}
@@ -83,8 +83,8 @@ fbq('track','PageView');
     Entrar no grupo
   </a>
   <div class="free">Gratuito · sai quando quiser · sem spam</div>
-  <div class="bar"><i></i></div>
-  <div class="note">Abrindo o WhatsApp automaticamente…</div>
+  
+  <div class="note">Toque no botão verde para entrar no grupo</div>
 
   <section class="cards">
     <div class="card"><div class="ic">🔥</div><div><b>Promoções relâmpago</b><span>Avisamos quando o preço cai, antes de acabar.</span></div></div>
@@ -115,7 +115,7 @@ var ctas=document.querySelectorAll('a.cta');
 for(var i=0;i<ctas.length;i++){
   ctas[i].addEventListener('click',function(ev){ev.preventDefault();ir('botao');});
 }
-setTimeout(function(){ir('auto');},4000);
+
 </script>
 </body>
 </html>
