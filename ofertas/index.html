@@ -32,8 +32,12 @@ html,body{margin:0;background:#000;font-family:system-ui,-apple-system,Segoe UI,
 </div></div>
 <script>
 /* ===== CONFIGURAÇÃO ===== */
-// Link do grupo atual. Quando o cronômetro zerar e você abrir um grupo novo, troque aqui.
-var GRUPO="https://chat.whatsapp.com/DybwBRGoUXmJlL7b3PTkMV";
+// Links dos grupos (1 Ferramentas, 2 Fitness, 3 Casa, 4 Bebês, 5 Pet). Ao abrir um grupo novo, troque o link aqui.
+var LINKS={1:"https://chat.whatsapp.com/DybwBRGoUXmJlL7b3PTkMV?s=cl&p=i&iam=2",/*Ferramentas*/
+2:"https://chat.whatsapp.com/ER1pq9AcTVH1CPiHuv01CU?s=cl&p=i&iam=2",/*Fitness e Saúde*/
+3:"https://chat.whatsapp.com/EDQgFS2lMU46WM74R2C6rH?s=cl&p=i&iam=2",/*Casa, Móveis e Decoração*/
+4:"https://chat.whatsapp.com/Gj8YT22CKwPIr0HS4PxeRj?s=cl&p=i&iam=2",/*Bebês e Crianças*/
+5:"https://chat.whatsapp.com/D1YCN5O164P2ALwRIVWBc2?s=cl&p=i&iam=2"/*Pet*/};
 // Cronômetro: começa em 00:01:47 e reinicia ao chegar a zero.
 var INICIO=107;
 // Nomes de pessoas reais, já no grupo, que autorizaram o uso do primeiro nome.
@@ -43,7 +47,7 @@ var MAS=["Enrico","Joaquim","Arthur","Gael","Théo","Heitor","Ravi","Davi","Bern
 var PADRAO=["F","F","F","M","M","F","F","M"];
 var INTERVALO=2500;
 /* ======================== */
-document.querySelectorAll(".hit").forEach(function(a){a.href=GRUPO});
+document.querySelectorAll(".hit").forEach(function(a){a.href=LINKS[a.dataset.cat]});
 function p(x){return String(x).padStart(2,"0")}
 var resta=INICIO;
 function mostraTempo(){document.getElementById("h").textContent=p(Math.floor(resta/3600));document.getElementById("m").textContent=p(Math.floor(resta%3600/60));document.getElementById("s").textContent=p(resta%60)}
